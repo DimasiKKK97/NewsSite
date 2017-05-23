@@ -13,5 +13,15 @@
 	</div>
 	<br>
 	<?php endforeach; ?>
+
+	<hr align="left" width="300px" size="1" color="#000" />
+
+	<br>
+
+	<form action="addnews.php" method="post">
+		Заголовок<input type="text" id="title"><br>
+		Текст<input type="text" id="text"><br>
+		<input type="submit" value="Отправить">
+	</form>
 </body>
 </html>
