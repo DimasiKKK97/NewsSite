@@ -19,8 +19,8 @@
 	<br>
 
 	<form action="addnews.php" method="post">
-		Заголовок<input type="text" id="title"><br>
-		Текст<input type="text" id="text"><br>
+		Заголовок<input type="text" name="title"><br>
+		Текст<input type="text" name="text"><br>
 		<input type="submit" value="Отправить">
 	</form>
 </body>
