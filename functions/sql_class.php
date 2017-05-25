@@ -21,6 +21,10 @@ class Sql{
 
 		return $data;
 	}
+
+	public function queryadd($query){
+		mysql_query($query);
+	}
 }
 
  ?>
