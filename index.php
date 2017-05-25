@@ -3,7 +3,12 @@
 require __DIR__ . '/models/news_class.php';
 
 $n = new News();
-$news = $n->showNews();
+$articles = $n->showNews();
+
+if(empty($articles)){
+	header('Location: /views/form.php');
+	exit;
+}
 
 require __DIR__ . '/views/main.php';
 
