@@ -2,26 +2,32 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" href="/../style.css">
 	<title>Новости</title>
 </head>
 <body>
-	<?php foreach($news as $new):?>
+	<?php foreach($articles as $news):?>
 	<div>
-		<?php echo $new['title']; ?><br>
-		<?php echo $new['date'];  ?><br>
-		<?php echo $new['textn']; ?><br>
+		<h2><?php echo $news['title']; ?></h2><br>
+		<p class="date"><?php echo $news['date']; ?></p><br>
+		<a href="showonenews.php?id=<?php echo $news['id'] ?>">Читать далее...</a>
 	</div>
 	<br>
 	<?php endforeach; ?>
 
 	<hr align="left" width="300px" size="1" color="#000" />
-
 	<br>
 
 	<form action="addnews.php" method="post">
-		Заголовок<input type="text" name="title"><br>
-		Текст<input type="text" name="text"><br>
-		<input type="submit" value="Отправить">
+		<p>
+			Заголовок:<br>
+			<input type="text" name="title" size="35">
+		</p>
+		<p>
+			Текст:<br>
+			<textarea name="text" cols="40" rows="4"></textarea>
+		</p>
+		<input class="sub" type="submit" value="Отправить">
 	</form>
 </body>
 </html>
