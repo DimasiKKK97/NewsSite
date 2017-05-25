@@ -1,14 +1,18 @@
 <?php 
 
 class Sql{
+	private $server;
+	private $password;
+	private $login;
+	private $dbname;
 
 	public function __construct(){
-		$server = 'localhost';
-		$password = '';
-		$login = 'root';
-		$dbname = 'news_site';
-		mysql_connect($server, $login, $password);
-		mysql_select_db($dbname);
+		$this->server = 'localhost';
+		$this->password = '';
+		$this->login = 'root';
+		$this->dbname = 'news_site';
+		mysql_connect($this->server, $this->login, $this->password);
+		mysql_select_db($this->dbname);
 	}
 
 	public function query($query){
@@ -27,4 +31,4 @@ class Sql{
 	}
 }
 
- ?>
+?>
