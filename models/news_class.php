@@ -4,9 +4,6 @@
 
 class News{
 
-	private $title;
-	private $text;
-
 	public function showNews(){
 		$query = 'SELECT * FROM news';
 		$shown = new Sql();
@@ -19,7 +16,12 @@ class News{
 		$addn = new Sql();
 		$addn->queryadd($query);
 	}
-
+	public function getoneNews($id){
+		$query = 'SELECT * FROM news WHERE id="' . $id . '"';
+		$showone = new Sql();
+		$data = $showone->query($query);
+		return $data;
+	}
 
 }
 ?>
